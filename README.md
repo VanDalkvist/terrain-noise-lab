@@ -1,4 +1,4 @@
-# Terrain Noise Lab
+# 10 minutes prototype of terrain maps generator by moise algorithms with isometric
 
 ![Terrain Noise Lab screenshot](docs/readme-screenshot.png)
 
