@@ -1,0 +1,362 @@
+.app-shell {
+  min-height: 100svh;
+  padding: 2rem;
+}
+
+.app-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(18rem, 0.85fr);
+  gap: 1.5rem;
+  align-items: end;
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow,
+.section-kicker {
+  margin: 0 0 0.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.app-header h1,
+.map-toolbar h2,
+.section-heading h2,
+.legend-item h3,
+.inspector-card h2 {
+  margin: 0;
+}
+
+.header-copy h1 {
+  max-width: 10ch;
+}
+
+.lede,
+.header-meta p,
+.section-description,
+.legend-item p {
+  margin: 0;
+  color: var(--muted-soft);
+}
+
+.header-meta {
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  background: rgba(10, 21, 33, 0.42);
+  border-radius: 1.25rem;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(19rem, 24rem) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.controls-panel,
+.map-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.panel-section,
+.legend-panel,
+.inspector-card,
+.map-toolbar {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: 1.25rem;
+  padding: 1.1rem;
+  box-shadow: var(--panel-shadow);
+}
+
+.panel-section--seed {
+  background:
+    radial-gradient(circle at top right, rgba(240, 180, 93, 0.18), transparent 34%),
+    var(--panel);
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  color: var(--muted);
+  background: rgba(145, 160, 176, 0.14);
+}
+
+.status-pill.is-live {
+  color: var(--accent-strong);
+  background: rgba(240, 180, 93, 0.16);
+}
+
+.seed-input {
+  display: grid;
+  gap: 0.45rem;
+  margin-top: 1rem;
+}
+
+.seed-input span,
+.control-header span,
+.coverage-label,
+.legend-item p,
+.metric-list dt {
+  font-size: 0.92rem;
+}
+
+.seed-input input {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: rgba(5, 11, 17, 0.58);
+  color: var(--text);
+  padding: 0.8rem 0.95rem;
+  border-radius: 0.9rem;
+  outline: none;
+}
+
+.seed-input input:focus {
+  border-color: rgba(240, 180, 93, 0.5);
+  box-shadow: 0 0 0 3px rgba(240, 180, 93, 0.12);
+}
+
+.button-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+button,
+a {
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    color 180ms ease;
+}
+
+button {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.78rem 1.1rem;
+  font: inherit;
+  font-weight: 600;
+  color: #0a1521;
+  background: var(--accent);
+  cursor: pointer;
+}
+
+button:hover,
+button:focus-visible,
+a:hover,
+a:focus-visible {
+  transform: translateY(-1px);
+}
+
+.button-secondary {
+  background: rgba(138, 156, 175, 0.12);
+  color: var(--text);
+  border-color: var(--line);
+}
+
+.preset-grid {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.preset-button {
+  text-align: left;
+  display: grid;
+  gap: 0.35rem;
+  padding: 0.95rem 1rem;
+  border-radius: 1rem;
+  background: rgba(8, 16, 25, 0.56);
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+
+.preset-button span {
+  color: var(--muted-soft);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.control-stack {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 0.9rem;
+}
+
+.control {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.control-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.control-header strong {
+  font-size: 0.88rem;
+  color: var(--accent-strong);
+}
+
+input[type='range'] {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.map-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.map-stage {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.92), rgba(237, 232, 221, 0.96)),
+    #f1eee6;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 18px 45px rgba(0, 0, 0, 0.14);
+}
+
+.map-canvas,
+.map-overlay {
+  width: 100%;
+  height: 100%;
+  display: block;
+  image-rendering: pixelated;
+}
+
+.map-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.inspector-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.metric-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1rem 0 0;
+}
+
+.metric-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid rgba(138, 156, 175, 0.14);
+}
+
+.metric-list dd,
+.metric-list dt {
+  margin: 0;
+}
+
+.metric-list dd {
+  font-family: var(--mono);
+}
+
+.coverage-list,
+.legend-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.coverage-list {
+  margin-top: 1rem;
+}
+
+.coverage-item,
+.legend-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.9rem;
+  align-items: start;
+}
+
+.coverage-label {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.coverage-swatch,
+.legend-swatch {
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.coverage-swatch {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.legend-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 0.8rem;
+}
+
+.legend-item {
+  padding: 0.75rem 0;
+  border-top: 1px solid rgba(138, 156, 175, 0.14);
+}
+
+.legend-item h3 {
+  font-size: 1rem;
+}
+
+.legend-swatch {
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.28rem;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 1080px) {
+  .workspace,
+  .app-header,
+  .inspector-grid,
+  .legend-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-toolbar {
+    align-items: start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 720px) {
+  .app-shell {
+    padding: 1rem;
+  }
+}

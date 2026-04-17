@@ -1,0 +1,91 @@
+:root {
+  --bg: #06111c;
+  --bg-accent: #0f2134;
+  --panel: rgba(11, 20, 31, 0.84);
+  --panel-strong: rgba(6, 13, 20, 0.96);
+  --line: rgba(138, 156, 175, 0.22);
+  --text: #edf2f7;
+  --muted: #9eb1c4;
+  --muted-soft: #c3d0db;
+  --accent: #f0b45d;
+  --accent-strong: #ffd99c;
+  --mono: 'IBM Plex Mono', 'SFMono-Regular', 'Cascadia Code', monospace;
+  --sans: 'Avenir Next', 'Segoe UI', sans-serif;
+  --display: 'Iowan Old Style', 'Palatino Linotype', serif;
+  --panel-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(28, 69, 108, 0.55), transparent 36%),
+    linear-gradient(180deg, #10233a 0%, #07131f 48%, #040a10 100%);
+  font: 16px/1.45 var(--sans);
+  letter-spacing: 0.01em;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 3rem 3rem;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent 88%);
+  pointer-events: none;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--display);
+  color: var(--text);
+}
+
+h1 {
+  font-size: clamp(3rem, 6vw, 5.4rem);
+  line-height: 0.94;
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  font-size: clamp(1.35rem, 2.2vw, 2rem);
+  line-height: 1.05;
+}
+
+h3 {
+  margin-bottom: 0.25rem;
+}
+
+p,
+button,
+input,
+a {
+  font: inherit;
+}
+
+a {
+  color: var(--accent-strong);
+  text-decoration: none;
+}
