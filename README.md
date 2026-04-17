@@ -1,5 +1,7 @@
 # Terrain Noise Lab
 
+![Terrain Noise Lab screenshot](docs/readme-screenshot.png)
+
 Small web app for procedural terrain generation inspired by Red Blob Games:
 
 - layered fractal noise for elevation
